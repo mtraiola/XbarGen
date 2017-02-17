@@ -23,28 +23,24 @@
                 </ul>
            
             <p>To compile XbarGen, you need to download the source code, open the shell, move to the downloaded folder and run the following commands:</p>
-            <code class="sh hljs bash">$ <span class="hljs-built_in">mkidr</span> build <br/>
-              $ <span class="hljs-built_in">cd</span> build <br/>
-              $ <span class="hljs-built_in">cmake</span> .. </br/>
-              $ <span class="hljs-built_in">make</span></code>
+            <code>
+              $ mkidr build <br/>
+              $ cd build <br/>
+              $ cmake ..<br/>
+              $ make
+            </code>
               <p>In case you receive compilation errors, they should be self-explanatory.</p>
-              <p>You should receive the following messages after executing the 'make' command</p>
-              <p><img src="figures/compilazione.png" /> </p>
               <p>If the compilation succeeds, the same directory contains the executables, namely <code class="hljs-built_in">XbarGen</code>.</p>
               <h2 id="doc" style="margin-left: -30px;">Documentation</h2>
               <p>XbarGen is released with documentation. In particular, the source code comes along with <a href="http://doxygen.org">Doxygen</a> documentation.</p>
-              <p>Doxygen internal documentation can be found <a target="_blank" href="internal-doc">here</a></p>
-              <p>It is also possible to generate XbarGen's internal documentation in order to consult it 'offline'</p>
-              <div class="panel panel-default">
-                <div class="panel-heading">Requirements</div>
-                <div class="panel-body" style="margin-left: -15px;">
+              <p>It is possible to generate XbarGen's internal documentation</p>
+              <p> Requirements:</p>
                   <ul>
                     <li>Install <a href="http://doxygen.org">Doxygen</a> (oldest version tested: 1.8.9.1)</li>
                     <li>Install <a href="http://www.graphviz.org">Graphviz</a> (oldest version tested: 2.36)</li>
                     <li>Make sure that the paths of 'doxygen' and 'dot' binary folders are included within the PATH environment variable</li>
                   </ul>
-                </div>
-              </div>
+               
               <p>CMake will eventually prepare the an entry for generating a Doxygen documentation project and you just need to type: </p>
               <code class="sh hljs bash">$ <span class="hljs-built_in">make</span> doc</code>
               <p>in the building folder to generate it. The documentation folder will be created in the building directory's parent folder.</p>
