@@ -1,4 +1,5 @@
 # XbarGen
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <div class="col-md-8 text-left" style="max-width: 825px">
           <h1 style="margin-left: -30px;" id="xbargen">XbarGen - Overview</h1>
           <p>XbarGen is an open-source software system for synthesizing memristor-based digital circuits.</p>
