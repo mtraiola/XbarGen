@@ -14,7 +14,7 @@ XbarGen is part of a far-reaching project, yet at its very early stage, which ai
 
 XbarGen is licensed with the GNU General Public License (GNU GPL). Please visit http://www.gnu.org/licenses/ to see a copy of the license.
 
-Although XbarGen is a project in which different people are involved, we kindly ask you to direct bug reports, questions and other comments to Marcello Traiola (traiola@lirmm.fr) or to the Bitbucket issue tracker.
+Although XbarGen is a project in which different people are involved, we kindly ask you to direct bug reports, questions and other comments to Marcello Traiola (traiola@lirmm.fr) or to the GitHub issue tracker.
 
 ##Building
 
