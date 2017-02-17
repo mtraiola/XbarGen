@@ -24,14 +24,16 @@ Before getting started, there are some requirements that are expected to be sati
 - Finally g++ is mandatory, for compiling XbarGen. The oldest version with which we tested is the 4.8.4 (Ubuntu - 2013) but it should reasonably work also with other versions.
 - Make sure that the paths of 'cmake' and 'g++' binary folders are included within the PATH environment variable
 To compile XbarGen, you need to download the source code, open the shell, move to the downloaded folder and run the following commands:
+```
+$ mkidr build 
+$ cd build 
+$ cmake .. 
+$ make
+```
 
-.$ mkidr build 
-.$ cd build 
-.$ cmake .. 
-.$ make
 In case you receive compilation errors, they should be self-explanatory.
 
-If the compilation succeeds, the same directory contains the executables, namely XbarGen.
+If the compilation succeeds, the same directory contains the executables, namely `XbarGen`.
 
 ##Documentation
 XbarGen is released with documentation. In particular, the source code comes along with Doxygen documentation.
@@ -43,7 +45,7 @@ It is possible to generate XbarGen's internal documentation
 - Install Graphviz (oldest version tested: 2.36)
 - Make sure that the paths of 'doxygen' and 'dot' binary folders are included within the PATH environment variable
 CMake will eventually prepare the an entry for generating a Doxygen documentation project and you just need to type:
-
+```
 $ make doc
-
+```
 in the building folder to generate it. The documentation folder will be created in the building directory's parent folder.
