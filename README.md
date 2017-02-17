@@ -35,6 +35,52 @@ In case you receive compilation errors, they should be self-explanatory.
 
 If the compilation succeeds, the same directory contains the executables, namely `XbarGen`.
 
+##Demo
+typing the command
+
+```
+$ make install
+```
+
+in the build folder will create the directory build/Demo which contains all the files that XbarGen needs in order to run a demo correctly
+
+###example 1
+
+Executing the following commands, move to the Demo folder and run XbarGen with the first example file demo_2Lev.eqn.
+
+```
+$ cd Demo 
+$ mkdir demo_2Lev 
+$ cp VHDLrsrvdWords.dat demo_2Lev 
+$ cd demo_2Lev 
+$ ../XbarGen ../demo_2Lev.eqn --stat --graph --vhdl 
+```
+
+These commands will create several files in a new directory Demo/demo_2Lev:
+
+- demo_2Lev_stat.txt: contains some statistics on the circuit
+- dependency_graph.dot: contains the dependency graph of the computed boolean function
+- some .vhd files: such files can be simulated with any commercial hdl simulator*
+
+###example 2
+Executing the following commands, run XbarGen with the second example file demo_multiLevel.eqn.
+
+```
+$ mkdir demo_MultiLev 
+$ cp VHDLrsrvdWords.dat demo_MultiLev 
+$ cd demo_MultiLev 
+$ ../XbarGen ../demo_multiLevel.eqn --stat --graph --vhdl 
+```
+
+These commands will create several files in a new directory Demo/demo_MultiLev:
+
+- demo_multiLevel_stat.txt: contains some statistics on the circuit
+- dependency_graph.dot: contains the dependency graph of the computed boolean function
+- some .vhd files: such files can be simulated with any commercial hdl simulator*
+
+<hr>
+(*)In order to simulate the resulting VHDL circuit, the memristor model is mandatory. The file within which such model is located is released as IPcore in the memristorModel directory.
+<hr>
 ##Documentation
 XbarGen is released with documentation. In particular, the source code comes along with Doxygen documentation.
 
