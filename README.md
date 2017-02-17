@@ -1,47 +1,49 @@
-# XbarGen
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<div class="col-md-8 text-left" style="max-width: 825px">
-          <h1 style="margin-left: -30px;" id="xbargen">XbarGen - Overview</h1>
-          <p>XbarGen is an open-source software system for synthesizing memristor-based digital circuits.</p>
-          <p>Specifically, XbarGen executes a translation of a boolean function into a digital circuit. Particularly, it targets a specific memristor-based crossbar architecture.</p>
-          <p>The underlying idea behind XbarGen is performing a design space exploration of memristor-based crossbar architectures.</p>
-          <p>XbarGen has been developed from scratch, due to the lack of an automated process of translation from a given boolean function to a memristor-based crossbar architecture.</p>
-          <p>XbarGen is part of a far-reaching project, yet at its very early stage, which aims to realize a Computer-Aided-Design (CAD) software system that targets memristor architectures.</p>
-          <p>XbarGen is licensed with the GNU General Public License (GNU GPL). Please visit <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a> to see a copy of the license.</p>
-          <p>Although XbarGen is a project in which <a href="acknowledgements#team">different people</a> are involved,
-            we kindly ask you to direct bug reports, questions and other comments to <a href="http://www.lirmm.fr/~traiola/">Marcello Traiola</a>
-            or to the Bitbucket issue tracker.</p>
-            <h2 id="buil" style="margin-left: -30px;">Building</h2>
-            <p>Before getting started, there are some requirements that are expected to be satisfied:</p>
 
-           
-                <ul>
-                  <li>We strongly suggest a <b>unix-like</b> system for compiling and using XbarGen;</li>
-                  <li>We used <a href="https://cmake.org">CMake</a>, for building the Makefile. The oldest version with which we tested is the 2.8.12.2 but it should reasonably work also with other versions;</li>
-                  <li>Finally <b>g++</b> is mandatory, for compiling XbarGen. The oldest version with which we tested is the 4.8.4 (Ubuntu - 2013) but it should reasonably work also with other versions.</li>
-                  <li>Make sure that the paths of 'cmake' and 'g++' binary folders are included within the PATH environment variable</li>
-                </ul>
-           
-            <p>To compile XbarGen, you need to download the source code, open the shell, move to the downloaded folder and run the following commands:</p>
-            <code>
-              $ mkidr build <br/>
-              $ cd build <br/>
-              $ cmake ..<br/>
-              $ make
-            </code>
-              <p>In case you receive compilation errors, they should be self-explanatory.</p>
-              <p>If the compilation succeeds, the same directory contains the executables, namely <code class="hljs-built_in">XbarGen</code>.</p>
-              <h2 id="doc" style="margin-left: -30px;">Documentation</h2>
-              <p>XbarGen is released with documentation. In particular, the source code comes along with <a href="http://doxygen.org">Doxygen</a> documentation.</p>
-              <p>It is possible to generate XbarGen's internal documentation</p>
-              <p> Requirements:</p>
-                  <ul>
-                    <li>Install <a href="http://doxygen.org">Doxygen</a> (oldest version tested: 1.8.9.1)</li>
-                    <li>Install <a href="http://www.graphviz.org">Graphviz</a> (oldest version tested: 2.36)</li>
-                    <li>Make sure that the paths of 'doxygen' and 'dot' binary folders are included within the PATH environment variable</li>
-                  </ul>
-               
-              <p>CMake will eventually prepare the an entry for generating a Doxygen documentation project and you just need to type: </p>
-              <code class="sh hljs bash">$ <span class="hljs-built_in">make</span> doc</code>
-              <p>in the building folder to generate it. The documentation folder will be created in the building directory's parent folder.</p>
-            </div>
+#XbarGen
+##Overview
+XbarGen is an open-source software system for synthesizing memristor-based digital circuits.
+
+Specifically, XbarGen executes a translation of a boolean function into a digital circuit. Particularly, it targets a specific memristor-based crossbar architecture.
+
+The underlying idea behind XbarGen is performing a design space exploration of memristor-based crossbar architectures.
+
+XbarGen has been developed from scratch, due to the lack of an automated process of translation from a given boolean function to a memristor-based crossbar architecture.
+
+XbarGen is part of a far-reaching project, yet at its very early stage, which aims to realize a Computer-Aided-Design (CAD) software system that targets memristor architectures.
+
+XbarGen is licensed with the GNU General Public License (GNU GPL). Please visit http://www.gnu.org/licenses/ to see a copy of the license.
+
+Although XbarGen is a project in which different people are involved, we kindly ask you to direct bug reports, questions and other comments to Marcello Traiola (traiola@lirmm.fr) or to the Bitbucket issue tracker.
+
+##Building
+Before getting started, there are some requirements that are expected to be satisfied:
+
+###Requirements
+- We strongly suggest a unix-like system for compiling and using XbarGen;
+- We used CMake, for building the Makefile. The oldest version with which we tested is the 2.8.12.2 but it should reasonably work also with other versions;
+- Finally g++ is mandatory, for compiling XbarGen. The oldest version with which we tested is the 4.8.4 (Ubuntu - 2013) but it should reasonably work also with other versions.
+- Make sure that the paths of 'cmake' and 'g++' binary folders are included within the PATH environment variable
+To compile XbarGen, you need to download the source code, open the shell, move to the downloaded folder and run the following commands:
+
+.$ mkidr build 
+.$ cd build 
+.$ cmake .. 
+.$ make
+In case you receive compilation errors, they should be self-explanatory.
+
+If the compilation succeeds, the same directory contains the executables, namely XbarGen.
+
+##Documentation
+XbarGen is released with documentation. In particular, the source code comes along with Doxygen documentation.
+
+It is possible to generate XbarGen's internal documentation
+
+###Requirements
+- Install Doxygen (oldest version tested: 1.8.9.1)
+- Install Graphviz (oldest version tested: 2.36)
+- Make sure that the paths of 'doxygen' and 'dot' binary folders are included within the PATH environment variable
+CMake will eventually prepare the an entry for generating a Doxygen documentation project and you just need to type:
+
+$ make doc
+
+in the building folder to generate it. The documentation folder will be created in the building directory's parent folder.
