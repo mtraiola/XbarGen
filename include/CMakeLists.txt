@@ -1,0 +1,7 @@
+set(HEADERS
+   ${HEADERS}
+   ${CMAKE_CURRENT_SOURCE_DIR}/control.h
+   ${CMAKE_CURRENT_SOURCE_DIR}/entities.h
+   ${CMAKE_CURRENT_SOURCE_DIR}/my_utils.h
+   PARENT_SCOPE
+)

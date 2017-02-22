@@ -1,0 +1,3 @@
+INORDER = a b c;
+OUTORDER = o1;
+o1 = !a*b*!c + !a*!b*c + a*!c + a*b;

@@ -1,0 +1,6 @@
+set(SOURCE
+   ${SOURCE}
+   ${CMAKE_CURRENT_SOURCE_DIR}/Analyzer.cpp
+   ${CMAKE_CURRENT_SOURCE_DIR}/Translator.cpp
+   PARENT_SCOPE
+)

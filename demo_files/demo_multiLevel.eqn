@@ -1,0 +1,8 @@
+INORDER = a b c;
+OUTORDER = o1;
+n5 = !b * c;
+n6 = a * !n5;
+n7 = b * !c;
+n8 = !n5 * !n7;
+n9 = !a * !n8;
+o1 = n6 + n9;
