@@ -86,7 +86,7 @@ These commands will create several files in a new directory Demo/demo_MultiLev:
 - some .vhd files: such files can be simulated with any commercial hdl simulator*
 
 <hr>
-(*)In order to simulate the resulting VHDL circuit, the memristor model is mandatory. The files within which such model are located is released in the memristorModel directory.
+(*)In order to simulate the resulting VHDL circuit, the memristor model is mandatory. The files within which such model is located are released in the memristorModel directory.
 <hr>
 
 ##Documentation
