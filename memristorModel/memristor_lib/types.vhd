@@ -62,4 +62,9 @@ end verify_voltage;
   
 end types;
 
+package variables is
 
+shared variable switchUpCnt : integer := 0;
+shared variable switchDownCnt : integer := 0;
+
+end variables;

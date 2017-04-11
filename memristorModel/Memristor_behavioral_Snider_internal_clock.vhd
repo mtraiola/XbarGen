@@ -31,6 +31,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 library memristor_lib;
 use memristor_lib.types.all;
+use memristor_lib.variables.all;
 
 entity Memristor_behavioral_Snider_internal_clock is
     Port ( Vpos : inout  voltage;
@@ -43,15 +44,15 @@ architecture Behavioral of Memristor_behavioral_Snider_internal_clock is
 constant VthPos : voltage := Vth;
 constant VthNeg : voltage := Vth_neg;
 
-signal internal_state : STD_LOGIC :='0';
+signal internal_state : STD_LOGIC :='1';
 signal V: voltage := (others=>'0');
 signal Vneg_temp_in, Vpos_temp_in: voltage := zero;
 signal Vneg_temp_out, Vpos_temp_out: voltage := (others=>'Z');
 signal out_en : std_logic := '0';
 
 type fsm_state is (zero, one);
-signal state : fsm_state;
-signal next_state : fsm_state;
+signal state : fsm_state := one;
+signal next_state : fsm_state := one;
 
 signal clk : std_logic := '0';
 
@@ -103,6 +104,13 @@ end process;
 change_state: process (clk)
 begin
 	if(clk'event and clk='1') then
+		if(state /= next_state) then
+			if(next_state = zero) then
+				switchDownCnt:=switchDownCnt+1;
+			else
+				switchUpCnt:=switchUpCnt+1;
+			end if;
+		end if;
 		state <= next_state;   --state change.
 	end if;
 end process;
